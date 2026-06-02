@@ -804,7 +804,10 @@
       { name: "Leg curl seduto", groupHint:"Legs", yt:"dQw4w9WgXcQ" },
     ];
 
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY);
+    const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
+);
 
     /******************************************************************
      * STATE
