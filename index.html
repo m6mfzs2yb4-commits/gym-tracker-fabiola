@@ -738,6 +738,21 @@
     /******************************************************************
      * CONFIG
      ******************************************************************/
+    window.onerror = function (msg, url, line, col, error) {
+  document.body.innerHTML = `
+    <div style="
+      color: #ff4444;
+      background: #0a0a0a;
+      padding: 20px;
+      font-family: monospace;
+    ">
+      <h2>JS ERROR</h2>
+      <p><b>Messaggio:</b> ${msg}</p>
+      <p><b>Riga:</b> ${line}</p>
+      <p><b>Colonna:</b> ${col}</p>
+    </div>
+  `;
+};
     const SUPABASE_URL = "https://uxipyzuwnvbtpabrjzql.supabase.co";
     const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4aXB5enV3bnZidHBhYnJqenFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjYwNTIsImV4cCI6MjA5NjAwMjA1Mn0.MAB6uGDJFQyT2nydpgj47XEzjdSelUe89rXArFzig4c";
     const COACH_EMAIL = "pgmanuel_19@icloud.com";
